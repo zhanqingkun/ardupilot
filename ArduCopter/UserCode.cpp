@@ -25,6 +25,7 @@ void Copter::userhook_50Hz()
 #ifdef USERHOOK_MEDIUMLOOP
 void Copter::userhook_MediumLoop()
 {
+	printf("10hz printf\n");
     // put your 10Hz code here
 }
 #endif
