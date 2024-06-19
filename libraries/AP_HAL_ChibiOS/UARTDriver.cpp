@@ -236,7 +236,7 @@ void UARTDriver::_begin(uint32_t b, uint16_t rxS, uint16_t txS)
         _uart_owner_thd = chThdGetSelfX();
         return;
     }
-
+	//初始化串口线程
     thread_rx_init();
 
     if (sdef.serial == nullptr) {

@@ -387,6 +387,7 @@ void AP_AHRS::update(bool skip_ins_update)
     hal.scheduler->boost_end();
 
     // update autopilot-body-to-vehicle-body from _trim parameters:
+	// 更新从自动驾驶仪主体到车辆主体的旋转矩阵，使用 _trim 参数:
     update_trim_rotation_matrices();
 
 #if AP_AHRS_DCM_ENABLED

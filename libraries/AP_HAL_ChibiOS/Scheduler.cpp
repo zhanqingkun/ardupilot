@@ -89,7 +89,7 @@ THD_WORKING_AREA(_monitor_thread_wa, MONITOR_THD_WA_SIZE);
 Scheduler::Scheduler()
 {
 }
-
+//调度器初始化
 void Scheduler::init()
 {
     chBSemObjectInit(&_timer_semaphore, false);
