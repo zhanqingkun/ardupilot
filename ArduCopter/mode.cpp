@@ -467,8 +467,8 @@ void Copter::notify_flight_mode() {
     notify.set_flight_mode_str(flightmode->name4());
 }
 
-// get_pilot_desired_angle - transform pilot's roll or pitch input into a desired lean angle
-// returns desired angle in centi-degrees
+// get_pilot_desired_lean_angles - 将飞行员的滚转或俯仰输入转换为期望的倾斜角度
+// 返回以百分度（centi-degrees）为单位的期望角度
 void Mode::get_pilot_desired_lean_angles(float &roll_out_cd, float &pitch_out_cd, float angle_max_cd, float angle_limit_cd) const
 {
     // throttle failsafe check

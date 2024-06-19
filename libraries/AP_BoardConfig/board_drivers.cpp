@@ -82,7 +82,7 @@ void AP_BoardConfig::board_setup_drivers(void)
     board_autodetect();
 
     px4_configured_board = (enum px4_board_type)state.board_type.get();
-
+	printf("px4_configured_board:%d\n", px4_configured_board);
     switch (px4_configured_board) {
     case PX4_BOARD_PX4V1:
     case PX4_BOARD_PIXHAWK:

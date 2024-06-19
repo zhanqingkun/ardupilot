@@ -231,7 +231,7 @@ static void main_loop()
     // optional test of SPI clock frequencies
     ChibiOS::SPIDevice::test_clock_freq();
 #endif
-
+	//adc初始化
     hal.analogin->init();
     hal.scheduler->init();
 

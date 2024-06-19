@@ -907,10 +907,8 @@ void NavEKF3::UpdateFilter(void)
     imuSampleTime_us = AP::dal().micros64();
 
     for (uint8_t i=0; i<num_cores; i++) {
-        // if we have not overrun by more than 3 IMU frames, and we
-        // have already used more than 1/3 of the CPU budget for this
-        // loop then suppress the prediction step. This allows
-        // multiple EKF instances to cooperate on scheduling
+		// 如果我们没有超出超过3个IMU帧的运行时间，并且已经使用了超过
+		// 本循环CPU预算的1/3，则抑制预测步骤。这允许多个EKF实例在调度上合作
         bool allow_state_prediction = true;
         if (core[i].getFramesSincePredict() < (_framesPerPrediction+3) &&
             AP::dal().ekf_low_time_remaining(AP_DAL::EKFType::EKF3, i)) {
